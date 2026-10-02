@@ -1,0 +1,7 @@
+{
+  "name": "HokisInvitation",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
