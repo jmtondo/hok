@@ -4,68 +4,92 @@
 
     <div class="invitation-card">
 
-      <!-- =====================================
-           HERO
-      ====================================== -->
+      <!-- =====================================================
+           TOP RACING STRIP
+           ===================================================== -->
+      <div class="racing-strip">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
 
+
+      <!-- =====================================================
+           HERO
+           ===================================================== -->
       <section class="hero-section">
 
-        <div class="red-decoration">
+        <div class="hero-decoration hero-decoration-left">
           <span></span>
           <span></span>
           <span></span>
         </div>
 
-        <p class="eyebrow">
-          YOU'RE INVITED
+        <div class="hero-decoration hero-decoration-right">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <p class="hero-eyebrow">
+          VROOM VROOM! YOU'RE INVITED
         </p>
-
-       <h1 class="celebrant-name">
-            <span>Nazzarius</span>
-            <span>Ross</span>
-        </h1>
-
-        <div class="divider"></div>
 
         <p class="event-type">
-          IS TURNING
+          1ST BIRTHDAY &amp; HOLY BAPTISM
         </p>
 
-        <p class="age">
-          1
-        </p>
+        <h1 class="celebrant-name">
+          NAZARIUS ROSS
+        </h1>
+
+        <div class="age-display">
+          <span class="age-number">1</span>
+          <span class="age-text">YEAR OLD</span>
+        </div>
+
+        <div class="hero-divider">
+          <span></span>
+          <strong>🏁</strong>
+          <span></span>
+        </div>
 
         <p class="hero-message">
-          COME CELEBRATE<br>
-          THIS SPECIAL DAY WITH US
+          COME CELEBRATE HIS<br>
+          <strong>FIRST BIG MILESTONE!</strong>
         </p>
 
       </section>
 
-      <button
-        class="music-button"
-        type="button"
-        (click)="toggleMusic()"
-        [class.paused]="musicPaused"
-        aria-label="Toggle music"
+
+      <!-- =====================================================
+           MUSIC
+           ===================================================== -->
+      <section class="music-section">
+
+        <button
+          type="button"
+          class="music-button"
+          (click)="toggleMusic()"
         >
-        <span>
-            {{ musicPaused ? '▶' : '♫' }}
-        </span>
+          <span class="music-icon">
+            {{ musicPaused ? '▶' : '❚❚' }}
+          </span>
+
+          <span>
+            {{ musicPaused ? 'PLAY MUSIC' : 'PAUSE MUSIC' }}
+          </span>
         </button>
 
-      <!-- =====================================
-           MAIN PHOTO
-      ====================================== -->
+      </section>
 
+
+      <!-- =====================================================
+           PHOTO
+           ===================================================== -->
       <section class="photo-section">
-
-        <div class="photo-header">
-          <span>THE LITTLE DRIVER</span>
-          <span>01 / 2026</span>
-        </div>
-
-        <div class="photo-number">01</div>
 
         <div class="photo-frame">
 
@@ -76,181 +100,296 @@
 
           <img
             src="assets/images/sihok.jpg"
-            alt="Nazzarius Ross"
+            alt="Nazarius Ross"
+            class="celebrant-photo"
           />
 
-          <div class="photo-overlay">
-            <span>RIDER</span>
-          </div>
-
         </div>
 
-        <div class="photo-info">
-
-          <div>
-            <p class="photo-label">DRIVER</p>
-            <h3>NAZZARIUS ROSS</h3>
-          </div>
-
-          <div class="photo-age">
-            <strong>01</strong>
-            <span>YEAR</span>
-          </div>
-
-        </div>
-
-        <div class="photo-footer">
-          <span>OCT 31</span>
-          <span>STARTING LINE</span>
-          <span>2026</span>
+        <div class="photo-caption">
+          <span>THE LITTLE RACER</span>
+          <strong>NAZARIUS ROSS</strong>
+          <span>BIRTHDAY BOY</span>
         </div>
 
       </section>
 
 
-      <!-- =====================================
-           EVENT DETAILS
-      ====================================== -->
+      <!-- =====================================================
+           EVENT VENUES
+           ===================================================== -->
+      <section class="details-section event-venues-section">
 
-      <section class="details-section">
-
-        <div class="red-lines">
-          <span></span>
-          <span></span>
-          <span></span>
+        <div class="section-heading">
+          <span>MARK YOUR CALENDAR</span>
+          <h2>THE BIG DAY</h2>
+          <div class="heading-line"></div>
         </div>
 
-        <p class="section-label">
-          SAVE THE DATE
-        </p>
 
-        <h2>
-          OCTOBER 31, 2026
-        </h2>
+        <!-- ===================================================
+             ST. PETER PARISH
+             =================================================== -->
+        <div class="venue-block baptism-block">
 
-        <p class="time">
-          6:00 PM
-        </p>
+          <div class="venue-header">
 
-        <div class="detail-row">
+            <div class="venue-number">
+              01
+            </div>
 
-          <div class="detail-icon">
-            📍
+            <div class="venue-heading-text">
+
+              <p class="venue-label">
+                HOLY BAPTISM
+              </p>
+
+              <h3>
+                ST. PETER PARISH
+              </h3>
+
+              <p class="venue-subtitle">
+                COMMONWEALTH, QUEZON CITY
+              </p>
+
+            </div>
+
           </div>
 
-          <div>
-            <p class="detail-title">THE VENUE</p>
-            <p class="detail-text">St. Peter Church</p>
-            <p class="detail-location">Commonwealth, Quezon City</p>
+
+          <div class="venue-details">
+
+            <div class="venue-detail-item">
+              <span class="detail-label">
+                DATE
+              </span>
+
+              <strong>
+                OCTOBER 31, 2026
+              </strong>
+            </div>
+
+
+            <div class="venue-detail-item">
+              <span class="detail-label">
+                TIME
+              </span>
+
+              <strong>
+                3:30–4:00 PM
+              </strong>
+            </div>
+
           </div>
+
+
+          <!-- ST PETER MAP -->
+          <div class="venue-map-container">
+
+            <div
+              id="stPeterMap"
+              class="venue-map"
+            ></div>
+
+            <div class="map-label">
+              <span>DESTINATION 01</span>
+              <strong>ST. PETER PARISH</strong>
+              <small>HOLY BAPTISM</small>
+            </div>
+
+          </div>
+
+
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=St.+Peter+Parish+Commonwealth+Quezon+City"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="venue-button"
+          >
+            VIEW ST. PETER LOCATION
+          </a>
 
         </div>
 
-        <!-- DARK MAP -->
-        <div class="venue-map">
 
-          <div id="venueMap"></div>
+        <!-- ===================================================
+             DIVIDER
+             =================================================== -->
+        <div class="venue-transition">
 
-          <div class="map-overlay">
-            <div class="map-status">
-              <span class="status-dot"></span>
-              LOCATION
-            </div>
+          <div class="transition-line"></div>
 
-            <div class="map-title">
-              ST. PETER PARISH
-            </div>
-
-            <div class="map-subtitle">
-              COMMONWEALTH, QUEZON CITY
-            </div>
+          <div class="transition-icon">
+            🏎️
           </div>
+
+          <div class="transition-text">
+            <span>THEN WE RACE TO</span>
+            <strong>THE BIRTHDAY CELEBRATION</strong>
+          </div>
+
+          <div class="transition-line"></div>
+
+        </div>
+
+
+        <!-- ===================================================
+             JOLLIBEE BANABA
+             =================================================== -->
+        <div class="venue-block birthday-block">
+
+          <div class="venue-header">
+
+            <div class="venue-number">
+              02
+            </div>
+
+            <div class="venue-heading-text">
+
+              <p class="venue-label">
+                RECEPTION &amp; 1ST BIRTHDAY
+              </p>
+
+              <h3>
+                JOLLIBEE BANABA
+              </h3>
+
+              <p class="venue-subtitle">
+                #38 GENERAL LUNA AVENUE<br>
+                BRGY. BANABA, SAN MATEO, RIZAL
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="venue-details">
+
+            <div class="venue-detail-item">
+              <span class="detail-label">
+                DATE
+              </span>
+
+              <strong>
+                OCTOBER 31, 2026
+              </strong>
+            </div>
+
+
+            <div class="venue-detail-item">
+              <span class="detail-label">
+                TIME
+              </span>
+
+              <strong>
+                5:00–7:00 PM
+              </strong>
+            </div>
+
+          </div>
+
+
+          <!-- JOLLIBEE MAP -->
+          <div class="venue-map-container">
+
+            <div
+              id="jollibeeMap"
+              class="venue-map"
+            ></div>
+
+            <div class="map-label">
+              <span>DESTINATION 02</span>
+              <strong>JOLLIBEE BANABA</strong>
+              <small>1ST BIRTHDAY RECEPTION</small>
+            </div>
+
+          </div>
+
+
+          <a
+            href="https://www.google.com/maps/place/Jollibee/data=!4m2!3m1!1s0x0:a870a3ef7888599?sa=X&ved=1t:2428&ictx=111"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="venue-button"
+          >
+            VIEW JOLLIBEE LOCATION
+          </a>
 
         </div>
 
       </section>
 
 
-      <!-- =====================================
+      <!-- =====================================================
            MESSAGE
-      ====================================== -->
-
+           ===================================================== -->
       <section class="message-section">
 
-        <div class="red-decoration small">
+        <div class="message-decoration">
           <span></span>
           <span></span>
           <span></span>
         </div>
 
-        <p class="section-label">
-          THE JOURNEY
+        <p class="message-eyebrow">
+          A SPECIAL DAY FOR A SPECIAL BOY
         </p>
 
         <h2>
-          A DAY WORTH<br>
-          REMEMBERING
+          START YOUR ENGINES!
         </h2>
 
-        <p class="message">
-
-          Some journeys are better when shared.
-          Join us as we celebrate another
-          milestone, another chapter, and
-          another unforgettable memory.
-
+        <p>
+          Come celebrate as Nazarius Ross reaches his
+          <strong>first big milestone</strong> and receives
+          the blessing of Holy Baptism.
         </p>
+
+        <p>
+          From the church to the birthday celebration,
+          we would love to have you along for the ride!
+        </p>
+
+        <div class="finish-line">
+          <span></span>
+          <strong>🏁</strong>
+          <span></span>
+        </div>
 
       </section>
 
 
-      <!-- =====================================
+      <!-- =====================================================
            COUNTDOWN
-      ====================================== -->
-
+           ===================================================== -->
       <section class="countdown-section">
 
-        <p class="section-label">COUNTDOWN</p>
+        <div class="section-heading light-heading">
+          <span>THE COUNTDOWN IS ON</span>
+          <h2>RACE DAY</h2>
+          <div class="heading-line"></div>
+        </div>
 
-        <div class="countdown">
+        <div class="countdown-grid">
 
-          <div class="count-box">
-            <strong
-              class="countdown-number"
-              [class.tick]="countdownTick"
-            >
-              {{ days }}
-            </strong>
+          <div class="countdown-item">
+            <strong>{{ countdown.days }}</strong>
             <span>DAYS</span>
           </div>
 
-          <div class="count-box">
-            <strong
-              class="countdown-number"
-              [class.tick]="countdownTick"
-            >
-              {{ hours }}
-            </strong>
+          <div class="countdown-item">
+            <strong>{{ countdown.hours }}</strong>
             <span>HOURS</span>
           </div>
 
-          <div class="count-box">
-            <strong
-              class="countdown-number"
-              [class.tick]="countdownTick"
-            >
-              {{ minutes }}
-            </strong>
+          <div class="countdown-item">
+            <strong>{{ countdown.minutes }}</strong>
             <span>MINUTES</span>
           </div>
 
-          <div class="count-box">
-            <strong
-              class="countdown-number"
-              [class.tick]="countdownTick"
-            >
-              {{ seconds }}
-            </strong>
+          <div class="countdown-item">
+            <strong>{{ countdown.seconds }}</strong>
             <span>SECONDS</span>
           </div>
 
@@ -258,173 +397,280 @@
 
       </section>
 
-      <!-- GODPARENTS -->
+
+      <!-- =====================================================
+           GODPARENTS
+           ===================================================== -->
       <section class="godparents-section">
 
-        <div class="red-decoration small">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+        <div class="section-heading">
 
-        <p class="section-label">THE CREW</p>
+          <span>THE PEOPLE BESIDE HIM</span>
 
-        <h2>
-          SPECIAL PEOPLE<br>
-          IN MY JOURNEY
-        </h2>
+          <h2>
+            GODPARENTS
+          </h2>
 
-        <p class="godparents-intro">
-          With love and gratitude, we are honored
-          to have these special people as part of
-          Nazzarius Ross' journey.
-        </p>
-
-        <!-- GODFATHER -->
-        <div class="godparent-group">
-
-          <div class="godparent-heading">
-            <span class="crew-number">01</span>
-
-            <div>
-              <p class="godparent-role">GODFATHER</p>
-              <span class="crew-line"></span>
-            </div>
-          </div>
-
-          <div class="godparent-list">
-
-            <div class="godparent">
-              <span class="godparent-index">01</span>
-              <span class="godparent-name">
-                Juan Dela Cruz
-              </span>
-            </div>
-
-            <div class="godparent">
-              <span class="godparent-index">02</span>
-              <span class="godparent-name">
-                Pedro Santos
-              </span>
-            </div>
-
-            <div class="godparent">
-              <span class="godparent-index">03</span>
-              <span class="godparent-name">
-                Michael Reyes
-              </span>
-            </div>
-
-          </div>
+          <div class="heading-line"></div>
 
         </div>
 
-        <!-- GODMOTHER -->
-        <div class="godparent-group">
 
-          <div class="godparent-heading">
-            <span class="crew-number">02</span>
+        <div class="godparents-grid">
 
-            <div>
-              <p class="godparent-role">GODMOTHER</p>
-              <span class="crew-line"></span>
-            </div>
+          <div class="godparent">
+            <span>01</span>
+            <strong>Juan Dela Cruz</strong>
           </div>
 
-          <div class="godparent-list">
-
-            <div class="godparent">
-              <span class="godparent-index">01</span>
-              <span class="godparent-name">
-                Maria Dela Cruz
-              </span>
-            </div>
-
-            <div class="godparent">
-              <span class="godparent-index">02</span>
-              <span class="godparent-name">
-                Ana Santos
-              </span>
-            </div>
-
-            <div class="godparent">
-              <span class="godparent-index">03</span>
-              <span class="godparent-name">
-                Sarah Reyes
-              </span>
-            </div>
-
+          <div class="godparent">
+            <span>02</span>
+            <strong>Pedro Santos</strong>
           </div>
 
-        </div>
+          <div class="godparent">
+            <span>03</span>
+            <strong>Michael Reyes</strong>
+          </div>
 
-        <div class="crew-footer">
-          <span></span>
-          <p>THE PEOPLE WHO HELP GUIDE THE JOURNEY</p>
-          <span></span>
+          <div class="godparent">
+            <span>04</span>
+            <strong>Maria Dela Cruz</strong>
+          </div>
+
+          <div class="godparent">
+            <span>05</span>
+            <strong>Ana Santos</strong>
+          </div>
+
+          <div class="godparent">
+            <span>06</span>
+            <strong>Sarah Reyes</strong>
+          </div>
+
         </div>
 
       </section>
 
-      <!-- =====================================
-           RSVP
-      ====================================== -->
+      <!-- ==========================================
+          WISHLIST / PIT STOP SECTION
+      ========================================== -->
 
+      <section class="wishlist-section">
+
+        <div class="wishlist-header">
+
+          <span class="wishlist-label">PIT STOP WISHLIST</span>
+
+          <h2>
+            LITTLE GIFTS<br>
+            FOR OUR LITTLE RACER
+          </h2>
+
+          <p>
+            Your presence is already a wonderful gift!
+            But if you'd like to bring something for Nazarius,
+            here are a few things he might enjoy.
+          </p>
+
+        </div>
+
+
+        <div class="wishlist-road">
+
+          <!-- Gift 1 -->
+          <div class="wish-item">
+
+            <div class="wish-number">01</div>
+
+            <div class="wish-icon">
+              🧸
+            </div>
+
+            <div class="wish-info">
+              <h3>TOYS</h3>
+              <p>
+                Age-appropriate toys, cars, building blocks,
+                or anything fun for a little one.
+              </p>
+            </div>
+
+          </div>
+
+
+          <!-- Gift 2 -->
+          <div class="wish-item">
+
+            <div class="wish-number">02</div>
+
+            <div class="wish-icon">
+              👕
+            </div>
+
+            <div class="wish-info">
+              <h3>CLOTHES</h3>
+              <p>
+                Baby clothes, comfy outfits, pajamas,
+                or cute little shoes.
+              </p>
+            </div>
+
+          </div>
+
+
+          <!-- Gift 3 -->
+          <div class="wish-item">
+
+            <div class="wish-number">03</div>
+
+            <div class="wish-icon">
+              📚
+            </div>
+
+            <div class="wish-info">
+              <h3>BOOKS</h3>
+              <p>
+                Picture books, story books,
+                and fun books for growing and learning.
+              </p>
+            </div>
+
+          </div>
+
+
+          <!-- Gift 4 -->
+          <div class="wish-item">
+
+            <div class="wish-number">04</div>
+
+            <div class="wish-icon">
+              🍼
+            </div>
+
+            <div class="wish-info">
+              <h3>BABY ESSENTIALS</h3>
+              <p>
+                Feeding items, towels, blankets,
+                bibs, or other useful baby essentials.
+              </p>
+            </div>
+
+          </div>
+
+
+          <!-- Gift 5 -->
+          <div class="wish-item">
+
+            <div class="wish-number">05</div>
+
+            <div class="wish-icon">
+              🎁
+            </div>
+
+            <div class="wish-info">
+              <h3>GIFT OF YOUR CHOICE</h3>
+              <p>
+                Anything you think would make
+                our little racer smile.
+              </p>
+            </div>
+
+          </div>
+
+
+          <!-- Gift 6 -->
+          <div class="wish-item">
+
+            <div class="wish-number">06</div>
+
+            <div class="wish-icon">
+              💌
+            </div>
+
+            <div class="wish-info">
+              <h3>MONETARY GIFT</h3>
+              <p>
+                A little contribution toward
+                Nazarius' future adventures.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="wishlist-note">
+
+          <div class="wishlist-checkered"></div>
+
+          <strong>
+            NO PRESSURE — JUST GOOD VIBES!
+          </strong>
+
+          <span>
+            Come celebrate, eat some Jollibee,
+            and enjoy the day with us.
+          </span>
+
+        </div>
+
+      </section>
+
+
+
+      <!-- =====================================================
+           RSVP
+           ===================================================== -->
       <section class="rsvp-section">
 
-        <div class="red-decoration small">
+        <div class="rsvp-content">
 
-          <span></span>
-          <span></span>
-          <span></span>
+          <p>
+            READY TO JOIN THE RACE?
+          </p>
+
+          <h2>
+            RSVP
+          </h2>
+
+          <span>
+            LET US KNOW IF YOU'LL BE JOINING US
+            FOR NAZARIUS' SPECIAL DAY.
+          </span>
+
+          <a
+            href="#"
+            class="rsvp-button"
+          >
+            CONFIRM ATTENDANCE
+          </a>
 
         </div>
-
-        <p class="section-label">
-          YOUR PRESENCE MATTERS
-        </p>
-
-        <h2>
-          WILL YOU<br>
-          JOIN US?
-        </h2>
-
-        <p class="rsvp-message">
-          Please let us know if you can
-          make it to the celebration.
-        </p>
-
-        <button
-          class="rsvp-button"
-          type="button"
-        >
-          RSVP NOW
-        </button>
 
       </section>
 
 
-      <!-- =====================================
+      <!-- =====================================================
            FOOTER
-      ====================================== -->
+           ===================================================== -->
+      <footer class="invitation-footer">
 
-      <footer>
-
-        <div class="footer-car">
-          ─────────── 🚗 ───────────
+        <div class="footer-logo">
+          NR<span>01</span>
         </div>
 
         <p>
-          SEE YOU AT THE STARTING LINE
+          NAZARIUS ROSS
         </p>
 
-        <div class="footer-lines">
+        <span>
+          1ST BIRTHDAY &amp; HOLY BAPTISM
+        </span>
 
-          <span></span>
-          <span></span>
-          <span></span>
-
-        </div>
+        <small>
+          OCTOBER 31, 2026
+        </small>
 
       </footer>
 
@@ -433,3 +679,4 @@
   </div>
 
 </ion-content>
+
