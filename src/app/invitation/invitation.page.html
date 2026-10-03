@@ -1,0 +1,435 @@
+<ion-content [fullscreen]="true" class="invitation-page">
+
+  <div class="page-wrapper">
+
+    <div class="invitation-card">
+
+      <!-- =====================================
+           HERO
+      ====================================== -->
+
+      <section class="hero-section">
+
+        <div class="red-decoration">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <p class="eyebrow">
+          YOU'RE INVITED
+        </p>
+
+       <h1 class="celebrant-name">
+            <span>Nazzarius</span>
+            <span>Ross</span>
+        </h1>
+
+        <div class="divider"></div>
+
+        <p class="event-type">
+          IS TURNING
+        </p>
+
+        <p class="age">
+          1
+        </p>
+
+        <p class="hero-message">
+          COME CELEBRATE<br>
+          THIS SPECIAL DAY WITH US
+        </p>
+
+      </section>
+
+      <button
+        class="music-button"
+        type="button"
+        (click)="toggleMusic()"
+        [class.paused]="musicPaused"
+        aria-label="Toggle music"
+        >
+        <span>
+            {{ musicPaused ? '▶' : '♫' }}
+        </span>
+        </button>
+
+      <!-- =====================================
+           MAIN PHOTO
+      ====================================== -->
+
+      <section class="photo-section">
+
+        <div class="photo-header">
+          <span>THE LITTLE DRIVER</span>
+          <span>01 / 2026</span>
+        </div>
+
+        <div class="photo-number">01</div>
+
+        <div class="photo-frame">
+
+          <div class="photo-corner top-left"></div>
+          <div class="photo-corner top-right"></div>
+          <div class="photo-corner bottom-left"></div>
+          <div class="photo-corner bottom-right"></div>
+
+          <img
+            src="assets/images/sihok.jpg"
+            alt="Nazzarius Ross"
+          />
+
+          <div class="photo-overlay">
+            <span>RIDER</span>
+          </div>
+
+        </div>
+
+        <div class="photo-info">
+
+          <div>
+            <p class="photo-label">DRIVER</p>
+            <h3>NAZZARIUS ROSS</h3>
+          </div>
+
+          <div class="photo-age">
+            <strong>01</strong>
+            <span>YEAR</span>
+          </div>
+
+        </div>
+
+        <div class="photo-footer">
+          <span>OCT 31</span>
+          <span>STARTING LINE</span>
+          <span>2026</span>
+        </div>
+
+      </section>
+
+
+      <!-- =====================================
+           EVENT DETAILS
+      ====================================== -->
+
+      <section class="details-section">
+
+        <div class="red-lines">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <p class="section-label">
+          SAVE THE DATE
+        </p>
+
+        <h2>
+          OCTOBER 31, 2026
+        </h2>
+
+        <p class="time">
+          6:00 PM
+        </p>
+
+        <div class="detail-row">
+
+          <div class="detail-icon">
+            📍
+          </div>
+
+          <div>
+            <p class="detail-title">THE VENUE</p>
+            <p class="detail-text">St. Peter Church</p>
+            <p class="detail-location">Commonwealth, Quezon City</p>
+          </div>
+
+        </div>
+
+        <!-- DARK MAP -->
+        <div class="venue-map">
+
+          <div id="venueMap"></div>
+
+          <div class="map-overlay">
+            <div class="map-status">
+              <span class="status-dot"></span>
+              LOCATION
+            </div>
+
+            <div class="map-title">
+              ST. PETER PARISH
+            </div>
+
+            <div class="map-subtitle">
+              COMMONWEALTH, QUEZON CITY
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =====================================
+           MESSAGE
+      ====================================== -->
+
+      <section class="message-section">
+
+        <div class="red-decoration small">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <p class="section-label">
+          THE JOURNEY
+        </p>
+
+        <h2>
+          A DAY WORTH<br>
+          REMEMBERING
+        </h2>
+
+        <p class="message">
+
+          Some journeys are better when shared.
+          Join us as we celebrate another
+          milestone, another chapter, and
+          another unforgettable memory.
+
+        </p>
+
+      </section>
+
+
+      <!-- =====================================
+           COUNTDOWN
+      ====================================== -->
+
+      <section class="countdown-section">
+
+        <p class="section-label">COUNTDOWN</p>
+
+        <div class="countdown">
+
+          <div class="count-box">
+            <strong
+              class="countdown-number"
+              [class.tick]="countdownTick"
+            >
+              {{ days }}
+            </strong>
+            <span>DAYS</span>
+          </div>
+
+          <div class="count-box">
+            <strong
+              class="countdown-number"
+              [class.tick]="countdownTick"
+            >
+              {{ hours }}
+            </strong>
+            <span>HOURS</span>
+          </div>
+
+          <div class="count-box">
+            <strong
+              class="countdown-number"
+              [class.tick]="countdownTick"
+            >
+              {{ minutes }}
+            </strong>
+            <span>MINUTES</span>
+          </div>
+
+          <div class="count-box">
+            <strong
+              class="countdown-number"
+              [class.tick]="countdownTick"
+            >
+              {{ seconds }}
+            </strong>
+            <span>SECONDS</span>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- GODPARENTS -->
+      <section class="godparents-section">
+
+        <div class="red-decoration small">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <p class="section-label">THE CREW</p>
+
+        <h2>
+          SPECIAL PEOPLE<br>
+          IN MY JOURNEY
+        </h2>
+
+        <p class="godparents-intro">
+          With love and gratitude, we are honored
+          to have these special people as part of
+          Nazzarius Ross' journey.
+        </p>
+
+        <!-- GODFATHER -->
+        <div class="godparent-group">
+
+          <div class="godparent-heading">
+            <span class="crew-number">01</span>
+
+            <div>
+              <p class="godparent-role">GODFATHER</p>
+              <span class="crew-line"></span>
+            </div>
+          </div>
+
+          <div class="godparent-list">
+
+            <div class="godparent">
+              <span class="godparent-index">01</span>
+              <span class="godparent-name">
+                Juan Dela Cruz
+              </span>
+            </div>
+
+            <div class="godparent">
+              <span class="godparent-index">02</span>
+              <span class="godparent-name">
+                Pedro Santos
+              </span>
+            </div>
+
+            <div class="godparent">
+              <span class="godparent-index">03</span>
+              <span class="godparent-name">
+                Michael Reyes
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- GODMOTHER -->
+        <div class="godparent-group">
+
+          <div class="godparent-heading">
+            <span class="crew-number">02</span>
+
+            <div>
+              <p class="godparent-role">GODMOTHER</p>
+              <span class="crew-line"></span>
+            </div>
+          </div>
+
+          <div class="godparent-list">
+
+            <div class="godparent">
+              <span class="godparent-index">01</span>
+              <span class="godparent-name">
+                Maria Dela Cruz
+              </span>
+            </div>
+
+            <div class="godparent">
+              <span class="godparent-index">02</span>
+              <span class="godparent-name">
+                Ana Santos
+              </span>
+            </div>
+
+            <div class="godparent">
+              <span class="godparent-index">03</span>
+              <span class="godparent-name">
+                Sarah Reyes
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="crew-footer">
+          <span></span>
+          <p>THE PEOPLE WHO HELP GUIDE THE JOURNEY</p>
+          <span></span>
+        </div>
+
+      </section>
+
+      <!-- =====================================
+           RSVP
+      ====================================== -->
+
+      <section class="rsvp-section">
+
+        <div class="red-decoration small">
+
+          <span></span>
+          <span></span>
+          <span></span>
+
+        </div>
+
+        <p class="section-label">
+          YOUR PRESENCE MATTERS
+        </p>
+
+        <h2>
+          WILL YOU<br>
+          JOIN US?
+        </h2>
+
+        <p class="rsvp-message">
+          Please let us know if you can
+          make it to the celebration.
+        </p>
+
+        <button
+          class="rsvp-button"
+          type="button"
+        >
+          RSVP NOW
+        </button>
+
+      </section>
+
+
+      <!-- =====================================
+           FOOTER
+      ====================================== -->
+
+      <footer>
+
+        <div class="footer-car">
+          ─────────── 🚗 ───────────
+        </div>
+
+        <p>
+          SEE YOU AT THE STARTING LINE
+        </p>
+
+        <div class="footer-lines">
+
+          <span></span>
+          <span></span>
+          <span></span>
+
+        </div>
+
+      </footer>
+
+    </div>
+
+  </div>
+
+</ion-content>

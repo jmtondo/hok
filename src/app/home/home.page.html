@@ -1,20 +1,94 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true" class="home-page">
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="page">
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <!-- =====================================
+         INVITATION CARD
+    ====================================== -->
+
+    <div
+      class="invitation-card"
+      [class.starting]="isStarting"
+      [class.opened]="isOpened"
+    >
+
+      <!-- Background invitation image -->
+      <img
+        src="assets/images/push.png"
+        alt="Push to start invitation"
+        class="start-image"
+      />
+
+
+      <!-- =================================
+           PUSH TO START BUTTON
+           Invisible button placed over
+           the button in the image
+      ================================== -->
+
+      <button
+        type="button"
+        class="push-start-button"
+        aria-label="Push to start"
+        [disabled]="isStarting"
+        (click)="pushToStart()"
+      >
+
+        <!-- Visual button glow -->
+        <span class="button-glow"></span>
+
+      </button>
+
+
+      <!-- =================================
+           STARTING OVERLAY
+      ================================== -->
+
+      <div
+        class="starting-overlay"
+        [class.show]="isStarting"
+      >
+
+        <div class="starting-content">
+
+          <div class="engine-light"></div>
+
+          <p>
+            STARTING
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- =================================
+           TRANSITION
+      ================================== -->
+
+      <div
+        class="transition-screen"
+        [class.show]="isOpened"
+      >
+
+        <div class="transition-content">
+
+          <div class="red-mark">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <p>
+            WELCOME
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
   </div>
+
 </ion-content>
