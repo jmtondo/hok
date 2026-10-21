@@ -10,65 +10,38 @@ import { MusicService } from '../services/music.service';
   imports: [IonContent],
 })
 export class HomePage {
-
   isStarting = false;
   isOpened = false;
 
   private engineSound: HTMLAudioElement;
 
-
   constructor(
     private router: Router,
-    private musicService: MusicService
+    private musicService: MusicService,
   ) {
-
-    this.engineSound = new Audio(
-      'assets/sounds/v12.mp3'
-    );
+    this.engineSound = new Audio('assets/sounds/v12.mp3');
 
     this.engineSound.preload = 'auto';
 
     this.engineSound.volume = 0.9;
 
-
     // Debug engine sound
-    this.engineSound.addEventListener(
-      'canplaythrough',
-      () => {
+    this.engineSound.addEventListener('canplaythrough', () => {
+      console.log('✅ Engine rev loaded');
+    });
 
-        console.log(
-          '✅ Engine rev loaded'
-        );
-
-      }
-    );
-
-    this.engineSound.addEventListener(
-      'error',
-      (error) => {
-
-        console.error(
-          '❌ Engine rev error:',
-          error
-        );
-
-      }
-    );
-
+    this.engineSound.addEventListener('error', (error) => {
+      console.error('❌ Engine rev error:', error);
+    });
   }
 
-
   pushToStart(): void {
-
     // Prevent double clicking
     if (this.isStarting) {
       return;
     }
 
-    console.log(
-      '🚗 PUSH TO START'
-    );
-
+    console.log('🚗 PUSH TO START');
 
     // ==========================================
     // ENGINE REV
@@ -79,21 +52,11 @@ export class HomePage {
     this.engineSound
       .play()
       .then(() => {
-
-        console.log(
-          '🔊 ENGINE REV PLAYING'
-        );
-
+        console.log('🔊 ENGINE REV PLAYING');
       })
       .catch((error) => {
-
-        console.error(
-          '❌ ENGINE REV FAILED:',
-          error
-        );
-
+        console.error('❌ ENGINE REV FAILED:', error);
       });
-
 
     // ==========================================
     // BACKGROUND MUSIC
@@ -101,37 +64,28 @@ export class HomePage {
 
     this.musicService.play();
 
-
     // ==========================================
     // START BUTTON ANIMATION
     // ==========================================
 
     this.isStarting = true;
 
-
     // ==========================================
     // OPENING ANIMATION
     // ==========================================
 
     setTimeout(() => {
-
       this.isOpened = true;
-
     }, 1300);
-
 
     // ==========================================
     // GO TO INVITATION
     // ==========================================
 
     setTimeout(() => {
-
-      this.router.navigate([
-        '/invitation'
-      ]);
-
+      this.router.navigate(['/invitation'], {
+        queryParamsHandling: 'preserve',
+      });
     }, 2200);
-
   }
-
 }
