@@ -10,16 +10,15 @@
   width: 100%;
   min-height: 100vh;
   padding: 30px 15px;
-  background:
-    linear-gradient(
-      135deg,
-      #050505 25%,
-      #0a0a0a 25%,
-      #0a0a0a 50%,
-      #050505 50%,
-      #050505 75%,
-      #0a0a0a 75%
-    );
+  background: linear-gradient(
+    135deg,
+    #050505 25%,
+    #0a0a0a 25%,
+    #0a0a0a 50%,
+    #050505 50%,
+    #050505 75%,
+    #0a0a0a 75%
+  );
   background-size: 12px 12px;
 }
 
@@ -33,7 +32,6 @@
     0 20px 60px rgba(0, 0, 0, 0.7),
     10px 10px 0 #e50914;
 }
-
 
 /* =========================================================
    RACING STRIP
@@ -57,7 +55,6 @@
   background: #ffffff;
 }
 
-
 /* =========================================================
    HERO
    ========================================================= */
@@ -67,13 +64,12 @@
   padding: 90px 30px 80px;
   text-align: center;
   overflow: hidden;
-  background:
-    radial-gradient(
-      circle at center,
-      #242424 0%,
-      #0d0d0d 45%,
-      #000000 100%
-    );
+  background: radial-gradient(
+    circle at center,
+    #242424 0%,
+    #0d0d0d 45%,
+    #000000 100%
+  );
   color: #ffffff;
 }
 
@@ -81,14 +77,13 @@
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(
-      120deg,
-      transparent 45%,
-      rgba(229, 9, 20, 0.08) 45%,
-      rgba(229, 9, 20, 0.08) 48%,
-      transparent 48%
-    );
+  background: linear-gradient(
+    120deg,
+    transparent 45%,
+    rgba(229, 9, 20, 0.08) 45%,
+    rgba(229, 9, 20, 0.08) 48%,
+    transparent 48%
+  );
   pointer-events: none;
 }
 
@@ -208,7 +203,6 @@
   transform: skewX(-25deg);
 }
 
-
 /* =========================================================
    MUSIC
    ========================================================= */
@@ -245,7 +239,6 @@
 .music-icon {
   font-size: 12px;
 }
-
 
 /* =========================================================
    PHOTO
@@ -323,7 +316,6 @@
   color: #e50914;
 }
 
-
 /* =========================================================
    GENERAL SECTION HEADING
    ========================================================= */
@@ -357,7 +349,6 @@
   transform: skewX(-25deg);
 }
 
-
 /* =========================================================
    EVENT VENUES
    ========================================================= */
@@ -378,7 +369,6 @@
   background: #e50914;
 }
 
-
 /* =========================================================
    VENUE BLOCK
    ========================================================= */
@@ -396,7 +386,6 @@
 .birthday-block {
   margin-top: 55px;
 }
-
 
 /* =========================================================
    VENUE HEADER
@@ -449,7 +438,6 @@
   letter-spacing: 1px;
 }
 
-
 /* =========================================================
    VENUE DETAILS
    ========================================================= */
@@ -483,7 +471,6 @@
   font-weight: 900;
 }
 
-
 /* =========================================================
    EACH LEAFLET MAP
    ========================================================= */
@@ -504,7 +491,6 @@
   min-height: 350px;
   z-index: 1;
 }
-
 
 /* =========================================================
    MAP LABEL
@@ -545,7 +531,6 @@
   font-size: 9px;
 }
 
-
 /* =========================================================
    MAP BUTTON
    ========================================================= */
@@ -573,7 +558,6 @@
   color: #000000;
   transform: translateX(5px);
 }
-
 
 /* =========================================================
    VENUE TRANSITION
@@ -627,7 +611,6 @@
   letter-spacing: 1px;
 }
 
-
 /* =========================================================
    LEAFLET CUSTOMIZATION
    ========================================================= */
@@ -643,7 +626,6 @@
 .leaflet-popup-tip {
   background: #ffffff;
 }
-
 
 /* =========================================================
    MESSAGE
@@ -715,7 +697,6 @@
   color: #ffffff;
 }
 
-
 /* =========================================================
    COUNTDOWN
    ========================================================= */
@@ -760,7 +741,6 @@
   letter-spacing: 2px;
 }
 
-
 /* =========================================================
    GODPARENTS
    ========================================================= */
@@ -798,7 +778,6 @@
   font-size: 13px;
   font-weight: 800;
 }
-
 
 /* =========================================================
    RSVP
@@ -873,7 +852,6 @@
   color: #000000;
 }
 
-
 /* =========================================================
    FOOTER
    ========================================================= */
@@ -918,13 +896,11 @@
   letter-spacing: 2px;
 }
 
-
 /* =========================================================
    MOBILE
    ========================================================= */
 
 @media (max-width: 700px) {
-
   .page-wrapper {
     padding: 0;
   }
@@ -1057,7 +1033,6 @@
   overflow: hidden;
 }
 
-
 /* ==========================================
    HEADER
 ========================================== */
@@ -1098,7 +1073,7 @@
 }
 
 .wishlist-header h2::after {
-  content: '';
+  content: "";
   display: block;
 
   width: 70px;
@@ -1121,7 +1096,6 @@
 
   color: #555555;
 }
-
 
 /* ==========================================
    WISHLIST ITEMS
@@ -1153,8 +1127,7 @@
 
   border-left: 5px solid #e50914;
 
-  box-shadow:
-    8px 8px 0 rgba(229, 9, 20, 0.12);
+  box-shadow: 8px 8px 0 rgba(229, 9, 20, 0.12);
 
   transition:
     transform 0.25s ease,
@@ -1164,10 +1137,8 @@
 .wish-item:hover {
   transform: translateX(5px);
 
-  box-shadow:
-    13px 8px 0 rgba(229, 9, 20, 0.18);
+  box-shadow: 13px 8px 0 rgba(229, 9, 20, 0.18);
 }
-
 
 /* ==========================================
    NUMBER
@@ -1182,7 +1153,6 @@
 
   color: #e50914;
 }
-
 
 /* ==========================================
    ICON
@@ -1202,10 +1172,8 @@
 
   font-size: 27px;
 
-  box-shadow:
-    0 0 0 3px #e50914;
+  box-shadow: 0 0 0 3px #e50914;
 }
-
 
 /* ==========================================
    INFORMATION
@@ -1233,7 +1201,6 @@
 
   color: #bdbdbd;
 }
-
 
 /* ==========================================
    BOTTOM NOTE
@@ -1309,13 +1276,11 @@
   opacity: 0.9;
 }
 
-
 /* ==========================================
    MOBILE
 ========================================== */
 
 @media (max-width: 600px) {
-
   .wishlist-section {
     padding: 55px 16px;
   }
@@ -1354,6 +1319,157 @@
   .wish-number {
     font-size: 10px;
   }
-
 }
 
+// ==========================================
+// PERSONALIZED GODPARENT SECTION
+// ==========================================
+
+.godparent-section {
+  padding: 70px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.godparent-card {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  padding: 35px 28px;
+  background: linear-gradient(145deg, #242424, #101010);
+  border: 1px solid #e50914;
+  border-radius: 22px;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+
+  box-shadow:
+    0 15px 45px rgba(0, 0, 0, 0.4),
+    0 0 25px rgba(229, 9, 20, 0.12);
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #f5c542;
+}
+
+.heart-icon {
+  margin-top: 35px;
+  color: #e50914;
+  font-size: 42px;
+}
+
+.invitation-label {
+  margin-top: 12px;
+  color: #f5c542;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.godparent-name {
+  margin: 15px 0;
+  font-size: clamp(27px, 6vw, 38px);
+  font-weight: 900;
+  line-height: 1.2;
+  color: #fff;
+
+  span {
+    display: block;
+    color: #f5c542;
+    margin-top: 5px;
+    overflow-wrap: anywhere;
+  }
+}
+
+.red-divider {
+  width: 65px;
+  height: 4px;
+  background: #e50914;
+  border-radius: 10px;
+  margin: 25px auto;
+}
+
+.godparent-message {
+  font-size: 15px;
+  line-height: 1.9;
+  color: #e5e5e5;
+
+  p {
+    margin-bottom: 18px;
+  }
+
+  strong {
+    color: #fff;
+  }
+}
+
+.thank-you {
+  color: #f5c542;
+  font-weight: 600;
+}
+
+.godparent-signature {
+  margin-top: 35px;
+
+  p {
+    font-size: 13px;
+    color: #ccc;
+  }
+
+  h3 {
+    margin: 10px 0 15px;
+    font-size: 24px;
+    font-weight: 900;
+    color: #fff;
+  }
+
+  span {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #aaa;
+  }
+}
+
+.racing-stripe {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 7px;
+
+  background: repeating-linear-gradient(
+    90deg,
+    #e50914 0px,
+    #e50914 25px,
+    #fff 25px,
+    #fff 50px
+  );
+}
+
+// ==========================================
+// MOBILE RESPONSIVENESS
+// ==========================================
+
+@media (max-width: 480px) {
+  .godparent-section {
+    padding: 45px 15px;
+  }
+
+  .godparent-card {
+    padding: 28px 20px;
+    border-radius: 18px;
+  }
+
+  .godparent-message {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+}
