@@ -198,7 +198,10 @@ export class InvitationPage implements OnInit, OnDestroy, AfterViewInit {
 
   ngAfterViewInit(): void {
     setTimeout(() => {
-      this.initializeStPeterMap();
+      if (this.selectedGodparent) {
+        this.initializeStPeterMap();
+      }
+
       this.initializeJollibeeMap();
     }, 100);
   }

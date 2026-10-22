@@ -30,7 +30,10 @@
 
         <p class="hero-eyebrow">VROOM VROOM! YOU'RE INVITED</p>
 
-        <p class="event-type">1ST BIRTHDAY &amp; HOLY BAPTISM</p>
+        <p class="event-type">
+          {{ selectedGodparent ? '1ST BIRTHDAY & HOLY BAPTISM' : '1ST BIRTHDAY
+          CELEBRATION' }}
+        </p>
 
         <h1 class="celebrant-name">NAZARIUS ROSS</h1>
 
@@ -99,7 +102,7 @@
         <!-- ===================================================
              ST. PETER PARISH
              =================================================== -->
-        <div class="venue-block baptism-block">
+        <div class="venue-block baptism-block" *ngIf="selectedGodparent">
           <div class="venue-header">
             <div class="venue-number">01</div>
 
@@ -150,7 +153,7 @@
         <!-- ===================================================
              DIVIDER
              =================================================== -->
-        <div class="venue-transition">
+        <div class="venue-transition" *ngIf="selectedGodparent">
           <div class="transition-line"></div>
 
           <div class="transition-icon">🏎️</div>
@@ -168,7 +171,9 @@
              =================================================== -->
         <div class="venue-block birthday-block">
           <div class="venue-header">
-            <div class="venue-number">02</div>
+            <div class="venue-number">
+              {{ selectedGodparent ? '02' : '01' }}
+            </div>
 
             <div class="venue-heading-text">
               <p class="venue-label">RECEPTION &amp; 1ST BIRTHDAY</p>
@@ -201,8 +206,10 @@
             <div id="jollibeeMap" class="venue-map"></div>
 
             <div class="map-label">
-              <span>DESTINATION 02</span>
+              <span> DESTINATION {{ selectedGodparent ? '02' : '01' }} </span>
+
               <strong>JOLLIBEE BANABA</strong>
+
               <small>1ST BIRTHDAY RECEPTION</small>
             </div>
           </div>
@@ -219,8 +226,8 @@
       </section>
 
       <!-- =====================================================
-           MESSAGE
-           ===================================================== -->
+     MESSAGE - DYNAMIC INVITATION
+===================================================== -->
       <section class="message-section">
         <div class="message-decoration">
           <span></span>
@@ -232,17 +239,36 @@
 
         <h2>START YOUR ENGINES!</h2>
 
-        <p>
-          Come celebrate as Nazarius Ross reaches his
-          <strong>first big milestone</strong> and receives the blessing of Holy
-          Baptism.
-        </p>
+        <!-- MESSAGE FOR GODPARENTS -->
+        <ng-container *ngIf="selectedGodparent">
+          <p>
+            Come celebrate as Nazarius Ross reaches his
+            <strong>first big milestone</strong>
+            and receives the blessing of Holy Baptism.
+          </p>
 
-        <p>
-          From the church to the birthday celebration, we would love to have you
-          along for the ride!
-        </p>
+          <p>
+            From the church to the birthday celebration, we would love to have
+            you along for the ride!
+          </p>
+        </ng-container>
 
+        <!-- MESSAGE FOR REGULAR GUESTS -->
+        <ng-container *ngIf="!selectedGodparent">
+          <p>
+            Our little racer is turning ONE! Join us as we celebrate Nazarius
+            Ross'
+            <strong>first big milestone</strong>
+            with a day filled with laughter, fun, and unforgettable memories.
+          </p>
+
+          <p>
+            Get ready for a fun-filled birthday celebration! We can't wait to
+            see you at the finish line!
+          </p>
+        </ng-container>
+
+        <!-- FINISH LINE DECORATION -->
         <div class="finish-line">
           <span></span>
           <strong>🏁</strong>
