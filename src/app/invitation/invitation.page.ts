@@ -50,7 +50,7 @@ export class InvitationPage implements OnInit, OnDestroy, AfterViewInit {
     lykie: { name: 'Lykie', title: 'Ninang' },
 
     // NINONGS
-    christian: { name: 'Christian', title: 'Ninong' },
+    'christian-1': { name: 'Christian', title: 'Ninong' },
     paulo: { name: 'Paulo', title: 'Ninong' },
     arvynn: { name: 'Arvynn', title: 'Ninong' },
     edilbert: { name: 'Edilbert', title: 'Ninong' },
@@ -75,9 +75,11 @@ export class InvitationPage implements OnInit, OnDestroy, AfterViewInit {
     cj: { name: 'CJ', title: 'Ninong' },
     renz: { name: 'Renz', title: 'Ninong' },
     franc: { name: 'Franc', title: 'Ninong' },
+    'christian-2': { name: 'Christian', title: 'Ninong' },
     ikey: { name: 'Ikey', title: 'Ninong' },
-    rhonie: { name: 'Rhonie', title: 'Ninong' },
+    ronie: { name: 'Rhonie', title: 'Ninong' },
     darrel: { name: 'Darrel', title: 'Ninong' },
+    gary: { name: 'Gary', title: 'Ninong' },
   };
 
   selectedGodparent: {
