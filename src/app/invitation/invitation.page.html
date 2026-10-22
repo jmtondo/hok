@@ -460,8 +460,9 @@
       </section>
 
       <!-- =====================================================
-           RSVP
-           ===================================================== -->
+     RSVP - DYNAMIC GOOGLE FORMS
+===================================================== -->
+
       <section class="rsvp-section">
         <div class="rsvp-content">
           <p>READY TO JOIN THE RACE?</p>
@@ -472,7 +473,17 @@
             LET US KNOW IF YOU'LL BE JOINING US FOR NAZARIUS' SPECIAL DAY.
           </span>
 
-          <a href="#" class="rsvp-button"> CONFIRM ATTENDANCE </a>
+          <!-- DYNAMIC RSVP BUTTON -->
+          <a
+            [href]="selectedGodparent
+        ? 'https://forms.gle/UL2FaLUr6kWFgFoYA'
+        : 'https://forms.gle/u1YsF1cg9KV9y9yy8'"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="rsvp-button"
+          >
+            CONFIRM ATTENDANCE
+          </a>
         </div>
       </section>
 
