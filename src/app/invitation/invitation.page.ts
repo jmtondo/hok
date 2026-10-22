@@ -31,6 +31,7 @@ export class InvitationPage implements OnInit, OnDestroy, AfterViewInit {
     }
   > = {
     // NINANGS
+    dianna: { name: 'Dianna', title: 'Ninang' },
     nicole: { name: 'Nicole', title: 'Ninang' },
     kaori: { name: 'Kaori', title: 'Ninang' },
     patricia: { name: 'Patricia', title: 'Ninang' },
